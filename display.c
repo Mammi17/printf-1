@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <stdlib.h>
 /**
  * display - entry block
  * @c: an character
@@ -7,5 +8,5 @@
  */
 int display(char c)
 {
-	return (fwrite(1, &c, 1));
+	return (write(1, &c, 1));
 }
