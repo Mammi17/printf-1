@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "main.h"
-#include <stdlib.h>
+#include <unistd.h>
 /**
  * display - entry block
  * @c: an character
