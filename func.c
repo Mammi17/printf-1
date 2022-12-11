@@ -22,14 +22,15 @@ int op_c(va_list note)
  */
 int op_de(va_list note)
 {
-	unsigned int j, c, n, numb, abs;
+	unsigned int j, c, numb, abs;
+	int j;
 	char l, b;
 	c = 0;
 	j = va_arg(note, int);
 	l = '-';
 	if (j < 0)
 	{
-		abs = (n * -1);
+		abs = (j * -1);
 		c += display(l);
 	}
 	else
@@ -66,7 +67,7 @@ int op_st(va_list note)
 	}
 	for (j = 0; string[j] != '\0'; j++)
 	{
-		b = string[i];
+		b = string[j];
 		display(b);
 		c++;
 	}
@@ -82,7 +83,7 @@ int op_t(va_list note)
 {
 	int t;
 	
-	t = print_de(note);
+	t = op_de(note);
 	return (t);
 }
 
