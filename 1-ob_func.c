@@ -22,7 +22,7 @@ int (*ob_func(char a))(va_list)
 	for (j = 0; point[j].cor != NULL; j++)
 	{
 		if (a == point[j].cor[0])
-			return (point[j],funct);
+			return (point[j].funct);
 	}
 	return (NULL);
 }

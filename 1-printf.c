@@ -26,26 +26,26 @@ int _printf(const char *format, ...)
 			{
 				if (format[j + 1] == '%')
 				{
-					c += write(1, format[j], 1);
+					c += write(1, &format[j], 1);
 					j +=2;
 				}
 				else
 				{
-					fun = ob_funct(format[j + 1]);
+					fun = ob_func(format[j + 1]);
 					if (fun != 0)
 					{
 						c += fun(note);
 					}
 					else
 					{
-						c = write(1, format[j], 1) + write(1, format[j] + 1, 1);
+						c = write(1, &format[j], 1) + write(1, &format[j + 1], 1);
 					}
 					j += 2;
 				}
 			}
 			else
 			{
-				c += write(1, format[j], 1);
+				c += write(1, &format[j], 1);
 				j++;
 			}
 		}
