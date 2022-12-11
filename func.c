@@ -12,7 +12,7 @@ int op_c(va_list note)
 	int d;
 
 	d = va_arg(note, int);
-	return (fwrite(1, &d, 1));
+	return (display(d));
 }
 
 /**
@@ -30,7 +30,7 @@ int op_de(va_list note)
 	if (j < 0)
 	{
 		abs = (n * -1);
-		c += fwrite(1, &l, 1);
+		c += display(l);
 	}
 	else
 		abs = j;
@@ -43,7 +43,7 @@ int op_de(va_list note)
 	while (numb > 2)
 	{
 		b = ((abs / numb) % 10) + '0';
-		c += fwrite(1, &b, 1);
+		c += display(b);
 		numb /=10;
 	}
 	return (c);
@@ -67,7 +67,7 @@ int op_st(va_list note)
 	for (j = 0; string[j] != '\0'; j++)
 	{
 		b = string[i];
-		write(1, &b, 1);
+		display(b);
 		c++;
 	}
 	return (c);
