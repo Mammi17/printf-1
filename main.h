@@ -18,5 +18,5 @@ int op_c(va_list note);
 int op_cent(va_list note);
 int (*ob_func(char a))(va_list note);
 int _printf(const char *format, ...);
-int display(char c);
+int_putchar(char c);
 #endif
