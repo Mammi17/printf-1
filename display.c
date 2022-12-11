@@ -5,7 +5,7 @@
  * @c: an character
  * Return: an integer
  */
-int _putchar(char c)
+int display(char c)
 {
 	return (fwrite(1, &c, 1));
 }
