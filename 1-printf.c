@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[j + 1] == '%')
 				{
-					c += display(format[j]);
+					c += _putchar(format[j]);
 					j +=2;
 				}
 				else
@@ -38,14 +38,14 @@ int _printf(const char *format, ...)
 					}
 					else
 					{
-						c = display(format[j]) + display(format[j +1]);
+						c = _putchar(format[j]) + _putchar(format[j +1]);
 					}
 					j += 2;
 				}
 			}
 			else
 			{
-				c += display(format[j]);
+				c += _putchar(format[j]);
 				j++;
 			}
 		}
