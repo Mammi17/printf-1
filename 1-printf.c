@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[j + 1] == '%')
 				{
-					c += write(1, &format[j], 1);
+					c += fwrite(1, &format[j], 1);
 					j +=2;
 				}
 				else
@@ -38,14 +38,14 @@ int _printf(const char *format, ...)
 					}
 					else
 					{
-						c = write(1, &format[j], 1) + write(1, &format[j + 1], 1);
+						c = fwrite(1, &format[j], 1) + fwrite(1, &format[j + 1], 1);
 					}
 					j += 2;
 				}
 			}
 			else
 			{
-				c += write(1, &format[j], 1);
+				c += fwrite(1, &format[j], 1);
 				j++;
 			}
 		}

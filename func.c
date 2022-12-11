@@ -12,7 +12,7 @@ int op_c(va_list note)
 	int d;
 
 	d = va_arg(note, int);
-	return (write(1, &d, 1));
+	return (fwrite(1, &d, 1));
 }
 
 /**
@@ -22,7 +22,7 @@ int op_c(va_list note)
  */
 int op_de(va_list note)
 {
-	int j, c, numb, abs, i;
+	unsigned int j, c, n, numb, abs;
 	char l, b;
 	c = 0;
 	j = va_arg(note, int);
@@ -30,7 +30,7 @@ int op_de(va_list note)
 	if (j < 0)
 	{
 		abs = (n * -1);
-		c += write(1, &l, 1);
+		c += fwrite(1, &l, 1);
 	}
 	else
 		abs = j;
@@ -43,7 +43,7 @@ int op_de(va_list note)
 	while (numb > 2)
 	{
 		b = ((abs / numb) % 10) + '0';
-		c += write(1, &b, 1);
+		c += fwrite(1, &b, 1);
 		numb /=10;
 	}
 	return (c);
@@ -51,7 +51,7 @@ int op_de(va_list note)
 
 /**
  * op_st - function that prints a string
- * @a: an argument
+ * @note: an argument
  * Return: an integer
  */
 int op_st(va_list note)
@@ -59,7 +59,7 @@ int op_st(va_list note)
 	char *string, b;
 	int c, j;
 
-	sting = va_arg(note, char *);
+	string = va_arg(note, char *);
 	if (string == NULL)
 	{
 		string = "null";
