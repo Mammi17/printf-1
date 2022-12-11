@@ -22,7 +22,7 @@ int op_c(va_list note)
  */
 int op_de(va_list note)
 {
-	unsigned int j, c, numb, abs;
+	unsigned int c, numb, abs;
 	int j;
 	char l, b;
 	c = 0;
