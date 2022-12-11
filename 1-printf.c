@@ -10,7 +10,7 @@
 
 int _printf(const char *format, ...)
 {
-	int j, c;
+	int j, c, (*fun)(va_list);
 	va_list note;
 
 	va_start(note, format);
@@ -19,33 +19,35 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 	else
-	while (format && format[j] != '\0')
 	{
-		if (format[j] == '%')
+		while (format && format[j] != '\0')
 		{
-			if (format[j + 1] == '%')
+			if (format[j] == '%')
 			{
-				c += write(1, format[j], 1);
-				j +=2;
-			}
-			else
-			{
-				fun = ob_funct(format[j + 1]);
-				if (fun != 0)
+				if (format[j + 1] == '%')
 				{
-					c += fun(note);
+					c += write(1, format[j], 1);
+					j +=2;
 				}
 				else
 				{
-					c = write(1, format[j], 1) + write(1, format[i + j, 1);
+					fun = ob_funct(format[j + 1]);
+					if (fun != 0)
+					{
+						c += fun(note);
+					}
+					else
+					{
+						c = write(1, format[j], 1) + write(1, format[j] + 1, 1);
+					}
+					j += 2;
 				}
-				j += 2;
 			}
-		}
-		else
-		{
-			c += write(1, format[j], 1);
-			j++;
+			else
+			{
+				c += write(1, format[j], 1);
+				j++;
+			}
 		}
 		/*
 		if (format[j] != '%')
@@ -73,6 +75,8 @@ int _printf(const char *format, ...)
 			} i++;
 		}
 	*/
-	va_end(note);
-	return (c)
+		va_end(note);
+		return (c);
+}
+return (-1);
 }
