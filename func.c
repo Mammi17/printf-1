@@ -16,7 +16,7 @@ int op_c(va_list note)
 }
 
 /**
- * op_d - function that prints a decimal
+ * op_de - function that prints a decimal
  * @note: an argument
  * Return: an integer
  */
@@ -63,7 +63,7 @@ int op_st(va_list note)
 	string = va_arg(note, char *);
 	if (string == NULL)
 	{
-		string = "null";
+		string = "(null)";
 	}
 	for (j = 0; string[j] != '\0'; j++)
 	{

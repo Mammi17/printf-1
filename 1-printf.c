@@ -49,32 +49,6 @@ int _printf(const char *format, ...)
 				j++;
 			}
 		}
-		/*
-		if (format[j] != '%')
-		{
-			buff[i] = format[j];
-			if (i == size)
-			{
-				if (buff > 0)
-				{
-					write(1, buffer[0], buff);
-					}
-					buff = 0;
-				}
-				pr++;
-			}
-			else
-			{
-				if (buff > 0)
-				{
-					write(1, buffer[0], buff);
-				}
-				buff = 0;
-				l = 
-				s = ", ";
-			} i++;
-		}
-	*/
 		va_end(note);
 		return (c);
 }
