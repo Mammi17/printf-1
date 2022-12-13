@@ -14,8 +14,7 @@ int _printf(const char *format, ...)
 	va_list note;
 
 	va_start(note, format);
-	j = 0;
-	c = 0;
+	j = 0; c = 0;
 	if (format == NULL)
 		return (-1);
 	else
@@ -27,19 +26,15 @@ int _printf(const char *format, ...)
 				if (format[j + 1] == '%')
 				{
 					c += display(format[j]);
-					j +=2;
+					j += 2;
 				}
 				else
 				{
 					fun = ob_func(format[j + 1]);
 					if (fun != 0)
-					{
 						c += fun(note);
-					}
 					else
-					{
-						c = display(format[j]) + display(format[j +1]);
-					}
+						c = display(format[j]) + display(format[j + 1]);
 					j += 2;
 				}
 			}
@@ -48,9 +43,7 @@ int _printf(const char *format, ...)
 				c += display(format[j]);
 				j++;
 			}
-		}
-		va_end(note);
+		} va_end(note);
 		return (c);
-}
-return (-1);
+} return (-1);
 }

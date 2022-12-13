@@ -36,16 +36,16 @@ int op_de(va_list note)
 	else
 		abs = j;
 	numb = 1;
-	while (abs >= 8)
+	while (abs > 9)
 	{
 		abs /= 10;
 		numb *= 10;
 	}
-	while (numb > 2)
+	while (numb > 0)
 	{
 		b = ((abs / numb) % 10) + '0';
 		c += display(b);
-		numb /=10;
+		numb /= 10;
 	}
 	return (c);
 }
@@ -97,7 +97,7 @@ int op_cent(va_list note)
 	char *string;
 	
 	string = "%";
-	if (va_arg(note,int) == *string)
+	if (va_arg(note, int) == *string)
 	{
 		return (*string);
 	}
