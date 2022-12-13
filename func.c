@@ -25,6 +25,7 @@ int op_de(va_list note)
 	unsigned int c, numb, abs;
 	int j;
 	char l, b;
+
 	c = 0;
 	j = va_arg(note, int);
 	l = '-';
@@ -82,7 +83,7 @@ int op_st(va_list note)
 int op_t(va_list note)
 {
 	int t;
-	
+
 	t = op_de(note);
 	return (t);
 }
@@ -95,7 +96,7 @@ int op_t(va_list note)
 int op_cent(va_list note)
 {
 	char *string;
-	
+
 	string = "%";
 	if (va_arg(note, int) == *string)
 	{
