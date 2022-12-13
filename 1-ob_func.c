@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdio.h>
-/*
- * ob_func - that fund the correct character
+/**
+ * ob_func - that prints the correct character
  * @a: a character
  * Return: an integer
  */

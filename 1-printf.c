@@ -14,8 +14,6 @@ int _printf(const char *format, ...)
 	va_list note;
 
 	va_start(note, format);
-	if (format == NULL)
-		return (-1);
 	if (format != NULL)
 	{
 		if (format[0] == '%' && format[1] == '\0')
