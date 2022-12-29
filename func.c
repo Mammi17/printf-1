@@ -22,7 +22,7 @@ int op_c(va_list note)
  */
 int op_de(va_list note)
 {
-	unsigned int c, numb, abs;
+	unsigned int c, numb, abs, a;
 	int j;
 	char l, b;
 
@@ -36,10 +36,11 @@ int op_de(va_list note)
 	}
 	else
 		abs = j;
+	a = abs
 	numb = 1;
-	while (abs > 9)
+	while (a > 9)
 	{
-		abs /= 10;
+		a /= 10;
 		numb *= 10;
 	}
 	while (numb > 0)
