@@ -9,28 +9,12 @@
  */
 int op_bi(va_list note)
 {
-	unsigned int i, j, d, l = 0, bi[32];
-	int c = 0;
-	char t;
+	unsigned int numb;
+	char *t;
 
-	i = va_arg(note, unsigned int);
-	d = 2^32;
-	j = 0;
-	while (j < 32)
-	{
-		bi[0] = i/d;
-		d /= 2;
-		bi[j] = (i / d) % 2;
-		l == bi[i];
-		if (sum || j == 31)
-		{
-			t = '0' + bi[j];
-			display(t);
-			c++;
-		}
-		i++;
-	}
-	return (c);
+	numb = va_arg(note, unsigned int);
+	t = op_vert(numb,2);
+	return (display(&t));
 }
 
 /**
@@ -43,14 +27,13 @@ int op_un(va_list note)
 	unsigned long int numb, ab;
 	int c;
 
-
 	c = 0;
 	numb = va_arg(note, unsigned long int);
 	if (numb == 0)
 	{
 		c = 1;
 	}
-	ab = numb
+	ab = numb;
 	while (ab != 0)
 	{
 		ab /= 10;
@@ -71,7 +54,7 @@ int op_un(va_list note)
  */
 int op_oc(va_list note)
 {
-	unsigned int numb, ab, i, j, m;
+	unsigned long int l, numb, ab, i, j, m;
 	int c;
 
 	c = 0;
@@ -82,7 +65,7 @@ int op_oc(va_list note)
 	while (numb > 7)
 	{
 		numb /= 8;
-		j *= 8
+		j *= 8;
 		c ++;
 		i++;
 	}
