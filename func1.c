@@ -14,7 +14,7 @@ int op_bi(va_list note)
 
 	numb = va_arg(note, unsigned int);
 	t = op_vert(numb, 2);
-	return (display(&t));
+	return (display(t));
 }
 
 /**
@@ -24,7 +24,7 @@ int op_bi(va_list note)
  */
 int op_un(va_list note)
 {
-	unsigned long int numb, ab;
+	unsigned long int a, numb, ab;
 	int c;
 
 	c = 0;
@@ -41,7 +41,8 @@ int op_un(va_list note)
 	}
 	if (numb >= 10)
 	{
-		op_un(numb / 10);
+		a = numb / 10;
+		op_un(a);
 	}
 	display(numb % 10 + '0');
 	return (c);
@@ -77,11 +78,9 @@ int op_oc(va_list note)
 		j /= 8;
 		display(ab + '0');
 		c++;
+		m++;
 	}
-	if (numb >= 10)
-	{
-		op_un(numb / 10);
-	}
+	return (c)
 }
 
 /**
