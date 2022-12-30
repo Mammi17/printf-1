@@ -33,7 +33,7 @@ int op_hexaup(va_list note);
 int op_inv(va_list note);
 int op_rot(va_list note);
 int op_noprint(va_list note);
-char *op_vert(va_list note);
+char *op_vert(unsigned long int a, int b);
 int op_ad(va_list note);
 int op_flag(char t, drap *g);
 int op_precision(const char *format, int j, va_list note);

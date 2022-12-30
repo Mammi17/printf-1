@@ -9,11 +9,11 @@
  */
 int op_bi(va_list note)
 {
-	unsigned int numb;
+	unsigned long int numb;
 	char *t;
 
 	numb = va_arg(note, unsigned int);
-	t = op_vert(numb,2);
+	t = op_vert(numb, 2);
 	return (display(&t));
 }
 
