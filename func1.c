@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
 /**
  * op_bi - function that print a binary number
@@ -103,7 +104,7 @@ int op_hexal(va_list note)
 		l /= 16;
 		c ++;
 	}
-	h = (char *) malloc(count * sizeof(char));
+	h = malloc(c)
 	j = 0;
 	while (numb != 0)
 	{

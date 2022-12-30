@@ -25,7 +25,7 @@ int op_de(va_list note);
 int op_t(va_list note);
 int op_c(va_list note);
 int op_cent(va_list note);
-int op_un(va_list note);
+int op_un(unsigned long int numb);
 int op_oc(va_list note);
 int op_bi(va_list note);
 int op_hexal(va_list note);
