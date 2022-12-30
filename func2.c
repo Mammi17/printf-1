@@ -99,7 +99,7 @@ int op_noprint(va_list note)
  * @note: an argument
  * Return: an integer
  */
-int op_vert (unsigned int a, int b)
+char *op_vert (unsigned int a, int b)
 {
 	const char *str = "0123456789ABCDEF";
 	char string[50], *pt;
