@@ -12,7 +12,7 @@ int flag (char t, drap *g)
 {
 	int j = 0;
 
-	switch (t);
+	switch (t)
 	{
 		case '+':
 			g->plus = 1;

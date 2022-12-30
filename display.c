@@ -15,7 +15,7 @@ int display(char c)
  * @s: a pointer
  * Return: an integer
  */
-int print(char *s)
+/** int print(char *s)
 {
 	int j;
 	j = 0;
@@ -25,4 +25,4 @@ int print(char *s)
 		j++;
 	}
 	return (j);
-}
+}*/
