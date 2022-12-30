@@ -3,14 +3,16 @@
 #include <stdlib.h>
 
 /**
- * flag - function that prints 
+ * flag - function that prints the flags
  * @t: a character
+ * @g: a structure
  * Return: an integer
  */
 int flag (char t, drap *g)
 {
 	int j = 0;
-	swich (t);
+
+	switch (t);
 	{
 		case '+':
 			g->plus = 1;

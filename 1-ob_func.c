@@ -19,7 +19,7 @@ int (*ob_func(char a))(va_list)
 		{"u", op_un},
 		{"o", op_oc},
 		{"x", op_hexal},
-		{"X", op_hexup},
+		{"X", op_hexaup},
 		{"S", op_noprint},
 		{"r", op_inv},
 		{"R", op_rot},
