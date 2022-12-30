@@ -23,7 +23,7 @@ int op_bi(va_list note)
  * @note: an argument
  * Return: an integer
  */
-int op_un(unsigned long int numb)
+int op_un(unsigned int numb)
 {
 	unsigned long int a, ab;
 	int c;
@@ -104,7 +104,7 @@ int op_hexal(va_list note)
 		l /= 16;
 		c ++;
 	}
-	h = malloc(c)
+	h = malloc(c);
 	j = 0;
 	while (numb != 0)
 	{
@@ -117,7 +117,7 @@ int op_hexal(va_list note)
 		numb /= 16;
 		j++;
 	}
-	b = i-1;
+	b = j-1;
 	while (b >= 0)
 	{
 		display(h[b]);
@@ -148,7 +148,7 @@ int op_hexaup(va_list note)
 		l /= 16;
 		c ++;
 	}
-	h = (char *) malloc(count * sizeof(char));
+	h = malloc(c);
 	j = 0;
 	while (numb != 0)
 	{
