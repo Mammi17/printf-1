@@ -36,10 +36,11 @@ int op_rot(va_list note)
 {
 	int numb, l, j;
 	char rot[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char rot[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM", *t;
+	char rot1[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char *t;
 
 	t = va_arg(note, char *);
-	l = 0
+	l = 0;
 	while (t[l] != 0)
 	{
 		if (t[l] < 'A' || (t[l] > 'Z' && t[l] < 'a') || t[l] > 'z')
@@ -50,7 +51,7 @@ int op_rot(va_list note)
 			while (j <= 52)
 			{
 				if (t[l] == rot[j])
-					display(rot[j]);
+					display(rot1[j]);
 				j++;
 			}
 		}
