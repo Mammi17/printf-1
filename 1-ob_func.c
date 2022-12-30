@@ -16,6 +16,15 @@ int (*ob_func(char a))(va_list)
 		{"i", op_t},
 		{"d", op_de},
 		{"%", op_cent},
+		{"u", op_un},
+		{"o", op_oc},
+		{"x", op_hexal},
+		{"X", op_hexup},
+		{"S", op_noprint},
+		{"r", op_inv},
+		{"R", op_rot},
+		{"p", op_de},
+		{"b", op_bi},
 		{NULL, NULL}
 	};
 

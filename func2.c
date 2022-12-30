@@ -7,7 +7,7 @@
  * @note: an argument
  * Return: an integer
  */
-int op_bi(va_list note)
+int op_inv(va_list note)
 {
 	int j, l;
 	char *t;
@@ -119,7 +119,7 @@ int op_vert (unsigned int a, int b)
  * @note: an argument
  * Return: an integer
  */
-int op_vert (va_list note)
+int op_ad(va_list note)
 {
 	char *string;
 	unsigned long int a;
