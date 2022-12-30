@@ -34,7 +34,7 @@ int op_inv(va_list note)
  */
 int op_rot(va_list note)
 {
-	int numb, l, j;
+	int l, j;
 	char rot[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char rot1[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	char *t;
@@ -67,14 +67,14 @@ int op_rot(va_list note)
  */
 int op_noprint(va_list note)
 {
-	int numb, a;
+	int c, j;
 	char *t, *str;
 
 	c = 0;
 	str = va_arg(note, char *);
 	if (str == NULL)
 	{
-		return ("(null)");
+		return (display("(null)"));
 	}
 	a = 0;
 	while (str[j] != '\0')
