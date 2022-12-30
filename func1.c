@@ -161,7 +161,7 @@ int op_hexaup(va_list note)
 		numb /= 16;
 		j++;
 	}
-	b = i-1;
+	b = j-1;
 	while (b >= 0)
 	{
 		display(h[b]);

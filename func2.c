@@ -13,12 +13,12 @@ int op_inv(va_list note)
 	char *t;
 
 	t = va_arg(note, char *);
-	if (s != NULL)
+	if (t != NULL)
 		t = "(null)";
 	j = 0;
 	while (t[j])
 		j++;
-	l = i - 1;
+	l = j - 1;
 	while (l >= 0)
 	{
 		display(t[l]);
