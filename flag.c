@@ -8,7 +8,7 @@
  * @g: a structure
  * Return: an integer
  */
-int flag (char t, drap *g)
+int flag(char t, drap *g)
 {
 	int j = 0;
 

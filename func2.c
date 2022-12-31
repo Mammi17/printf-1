@@ -107,8 +107,8 @@ char *op_vert(unsigned long int a, int b)
 {
 	const char *str = "0123456789ABCDEF";
 	char string[50], *pt;
-	
-	pt =&string[49];
+
+	pt = &string[49];
 	*pt = '\0';
 	while (a != 0)
 	{
@@ -128,7 +128,7 @@ int op_ad(va_list note)
 	char *string;
 	unsigned long int a;
 	int c, j;
-	
+
 	c = 0;
 	a = va_arg(note, unsigned long int);
 	if (a == 0)

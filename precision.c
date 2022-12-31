@@ -13,12 +13,12 @@ int precision(const char *format, int *j, va_list note)
 
 	a = *j + 1;
 	pre = -1;
-	if(format[a] != '.')
+	if (format[a] != '.')
 		return (pre);
 	pre = 0;
 	for (a += 1; format[a] != '\0'; a++)
 	{
-		if(format[a] >= '0' && format[a] <= '9')
+		if (format[a] >= '0' && format[a] <= '9')
 		{
 			pre *= 10;
 			pre += format[a] - '0';

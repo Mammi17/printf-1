@@ -16,7 +16,7 @@ int op_bi(va_list note)
 	char t;
 
 	a = va_arg(note, unsigned int);
-	b = (2^31);
+	b = (2 ^ 31);
 	bi[0] = a / b;
 	j = 0;
 	while (j < 32)
@@ -88,7 +88,7 @@ int op_oc(va_list note)
 	{
 		numb /= 8;
 		j *= 8;
-		c ++;
+		c++;
 		i++;
 	}
 	m = 1;
@@ -121,9 +121,9 @@ int op_hexal(va_list note)
 	if (numb == 0)
 		return (display('0'));
 	while (l != 0)
-	{	
+	{
 		l /= 16;
-		c ++;
+		c++;
 	}
 	h = malloc(c);
 	j = 0;
@@ -138,7 +138,7 @@ int op_hexal(va_list note)
 		numb /= 16;
 		j++;
 	}
-	b = j-1;
+	b = j - 1;
 	while (b >= 0)
 	{
 		display(h[b]);
@@ -165,9 +165,9 @@ int op_hexaup(va_list note)
 	if (numb == 0)
 		return (display('0'));
 	while (l != 0)
-	{	
+	{
 		l /= 16;
-		c ++;
+		c++;
 	}
 	h = malloc(c);
 	j = 0;
@@ -182,7 +182,7 @@ int op_hexaup(va_list note)
 		numb /= 16;
 		j++;
 	}
-	b = j-1;
+	b = j - 1;
 	while (b >= 0)
 	{
 		display(h[b]);
