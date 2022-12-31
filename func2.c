@@ -82,12 +82,14 @@ int op_noprint(va_list note)
 	{
 		if (str[j] > 0 && (str[j] < 32 || str[j] >= 127))
 		{
-			display("\\x");
-			numb += 2;
-			t = vert(str[j], 16);
+			display('\\');
+			display('x');
+			c += 2;
+			t = op_vert(str[j], 16);
 			if (t[1] != '\0')
 				c += display('0');
-			c += display(t);
+			for (i = 0; t[i]; i++)
+				c += display(t[i]);
 		}
 		else
 			c += display(str[j]);
