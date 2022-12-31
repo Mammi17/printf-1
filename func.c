@@ -36,7 +36,7 @@ int op_de(va_list note)
 	}
 	else
 		abs = j;
-	a = abs
+	a = abs;
 	numb = 1;
 	while (a > 9)
 	{
