@@ -68,14 +68,14 @@ int op_rot(va_list note)
  */
 int op_noprint(va_list note)
 {
-	int c, j;
+	int c, i, j;
 	char *t, *str;
 
 	c = 0;
 	str = va_arg(note, char *);
 	if (str == NULL)
 	{
-		return (write(1,"(null)",6));
+		return (write(1, "(null)", 6));
 	}
 	j = 0;
 	while (str[j] != '\0')
@@ -110,7 +110,7 @@ char *op_vert(unsigned long int a, int b)
 	
 	pt =&string[49];
 	*pt = '\0';
-	while (numb != 0)
+	while (a != 0)
 	{
 		*--pt = str[a % b];
 		a /= b;
@@ -127,16 +127,18 @@ int op_ad(va_list note)
 {
 	char *string;
 	unsigned long int a;
-	int c;
+	int c, j;
 	
 	c = 0;
 	a = va_arg(note, unsigned long int);
-	if (a != '\0')
+	if (a == 0)
 	{
-		return (display("(nil)"));
+		return (write(1, "(nil)", 6));
 	}
-	string = vert(a, 16);
-	c += display("0x");
-	c += display(string);
+	string = op_vert(a, 16);
+	c += display('0');
+	c += display('x');
+	for (j = 0; string[j]; j++)
+		c += display(string[j]);
 	return (c);
 }
