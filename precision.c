@@ -12,6 +12,7 @@ int precision(const char *format, int *j, va_list note)
 	int a, pre;
 
 	a = *j + 1;
+	pre = -1;
 	if(format[a] != '.')
 		return (pre);
 	pre = 0;
