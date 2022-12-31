@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdarg.h>
+#include <unistd.h>
 
 /**
  * op_inv - function that prints a string reverse
@@ -74,9 +75,9 @@ int op_noprint(va_list note)
 	str = va_arg(note, char *);
 	if (str == NULL)
 	{
-		return (display("(null)"));
+		return (write(1,"(null)",6));
 	}
-	a = 0;
+	j = 0;
 	while (str[j] != '\0')
 	{
 		if (str[j] > 0 && (str[j] < 32 || str[j] >= 127))
