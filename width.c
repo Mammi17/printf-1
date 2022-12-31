@@ -2,30 +2,31 @@
 #include <stdio.h>
 
 /**
- * precision - that handles the precision for non-custom
+ * width - that handles the width for non-custom
  * @format: a constante character
  * @j: integer
  * @note: an argument
+ * Return: an integer
  */
-int precision(const char *format, int j, va_list note)
+int width(const char *format, int j, va_list note)
 {
-	int a, pre;
+	int a, th;
 
 	a = *j + 1;
 	if(format[a] != '.')
 		return (pre);
-	pre = 0;
-	for (a += 1; format[a] != '\0'; a++)
+	th = 0;
+	for (a = *j + 1; format[a] != '\0'; a++)
 	{
 		if(format[a] >= '0' && format[a] <= '9')
 		{
-			pre *= 10;
-			pre += format[a] - '0';
+		       th *= 10;
+		      th += format[a] - '0';
 		}
 		if (format[a] == '*')
 		{
 			a++;
-			pre = va_arg(note, int);
+			th = va_arg(note, int);
 			break;
 		}
 		else
@@ -33,5 +34,5 @@ int precision(const char *format, int j, va_list note)
 	}
 
 	*j = a - 1;
-	return (pre);
+	return (th);
 }
