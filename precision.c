@@ -7,7 +7,7 @@
  * @j: integer
  * @note: an argument
  */
-int precision(const char *format, int j, va_list note)
+int precision(const char *format, int *j, va_list note)
 {
 	int a, pre;
 

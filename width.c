@@ -8,13 +8,11 @@
  * @note: an argument
  * Return: an integer
  */
-int width(const char *format, int j, va_list note)
+int width(const char *format, int *j, va_list note)
 {
 	int a, th;
 
 	a = *j + 1;
-	if(format[a] != '.')
-		return (pre);
 	th = 0;
 	for (a = *j + 1; format[a] != '\0'; a++)
 	{
