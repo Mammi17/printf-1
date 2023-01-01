@@ -21,7 +21,7 @@ int width(const char *format, int *j, va_list note)
 		       th *= 10;
 		      th += format[a] - '0';
 		}
-		if (format[a] == '*')
+		else if (format[a] == '*')
 		{
 			a++;
 			th = va_arg(note, int);

@@ -100,8 +100,9 @@ int op_noprint(va_list note)
 
 /**
  * op_vert - function that convert in string
- * @note: an argument
- * Return: an integer
+ * @a: an unsigned long integer
+ * @b: an integer
+ * Return: a character
  */
 char *op_vert(unsigned long int a, int b)
 {
