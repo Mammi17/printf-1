@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 	int a, b, d, e, j = 0, c = 0, (*fun)(va_list);
 	int *ac;
 	char *ab;
+	drap g;
 	va_list note;
 
 	va_start(note, format);
@@ -29,7 +30,7 @@ int _printf(const char *format, ...)
 					write(1, &ab, *ac);
 				else
 					*ac = 0;
-				a = flag(format, j);
+				a = flag(format, &g);
 				b = precision(format, &j, note);
 				d = width(format, &j, note);
 				e = size(format, &j);
