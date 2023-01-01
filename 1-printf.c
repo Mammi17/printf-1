@@ -11,9 +11,7 @@
 
 int _printf(const char *format, ...)
 {
-	int a, b, d, e, j = 0, c = 0, (*fun)(va_list);
-	int *ac;
-	char *ab;
+	int j = 0, c = 0, (*fun)(va_list);
 	drap g;
 	va_list note;
 
@@ -26,14 +24,14 @@ int _printf(const char *format, ...)
 		{
 			if (format[j] == '%')
 			{
-				if (*ac > 0)
+				/*if (*ac > 0)
 					write(1, &ab, *ac);
 				else
 					*ac = 0;
 				a = flag(format[j], &g);
 				b = precision(format, &j, note);
 				d = width(format, &j, note);
-				/*e = size(format, &j);*/
+				e = size(format, &j);*/
 				if (format[j + 1] == '%')
 				{
 					c += display(format[j]);
