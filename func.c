@@ -71,9 +71,8 @@ int op_st(va_list note)
 	{
 		b = string[j];
 		display(b);
-		c++;
 	}
-	return (c);
+	return (j);
 }
 
 /**

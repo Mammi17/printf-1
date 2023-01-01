@@ -6,6 +6,7 @@
  * @format: a constante character
  * @j: integer
  * @note: an argument
+ * Return: an interger
  */
 int precision(const char *format, int *j, va_list note)
 {

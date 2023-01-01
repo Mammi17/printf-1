@@ -16,7 +16,7 @@ int op_bi(va_list note)
 	char t;
 
 	a = va_arg(note, unsigned int);
-	b = (2 ^ 31);
+	b = 2147483648;
 	bi[0] = a / b;
 	j = 0;
 	while (j < 32)

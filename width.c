@@ -10,20 +10,20 @@
  */
 int width(const char *format, int *j, va_list note)
 {
-	int a, th;
+	int b, th;
 
-	a = *j + 1;
+	b = *j + 1;
 	th = 0;
-	for (a = *j + 1; format[a] != '\0'; a++)
+	for (b = *j + 1; format[b] != '\0'; a++)
 	{
-		if (format[a] >= '0' && format[a] <= '9')
+		if (format[b] >= '0' && format[b] <= '9')
 		{
 		       th *= 10;
-		      th += format[a] - '0';
+		      th += format[b] - '0';
 		}
-		else if (format[a] == '*')
+		else if (format[b] == '*')
 		{
-			a++;
+			b++;
 			th = va_arg(note, int);
 			break;
 		}
@@ -31,6 +31,6 @@ int width(const char *format, int *j, va_list note)
 			break;
 	}
 
-	*j = a - 1;
+	*j = b - 1;
 	return (th);
 }
