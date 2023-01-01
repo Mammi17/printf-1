@@ -8,7 +8,7 @@
  * @j: integer
  * Return: an integer
  */
-int width(const char *format, int *j)
+int size(const char *format, int *j)
 {
 	int c, ze;
 

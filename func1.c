@@ -11,7 +11,7 @@
 int op_bi(va_list note)
 {
 	unsigned int a;
-	int j, ;
+	int j;
 	char *t;
 
 	a = va_arg(note, unsigned int);
