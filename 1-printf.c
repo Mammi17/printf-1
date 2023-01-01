@@ -10,7 +10,9 @@
 
 int _printf(const char *format, ...)
 {
-	int j = 0, c = 0, (*fun)(va_list);
+	int a, b, d, e, j = 0, c = 0, (*fun)(va_list);
+	int *ac;
+	char *ab;
 	va_list note;
 
 	va_start(note, format);
@@ -22,6 +24,14 @@ int _printf(const char *format, ...)
 		{
 			if (format[j] == '%')
 			{
+				if (*ac > 0)
+					write(1, &ab, *ac);
+				else
+					*ac = 0;
+				a = flag(format, &j);
+				b = precision(format, &j, note);
+				d = width(format, &j, note);
+				e = size(format, &j);
 				if (format[j + 1] == '%')
 				{
 					c += display(format[j]);
@@ -36,6 +46,7 @@ int _printf(const char *format, ...)
 						c = display(format[j]) + display(format[j + 1]);
 					j += 2;
 				}
+				j++;
 			}
 			else
 			{

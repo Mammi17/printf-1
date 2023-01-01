@@ -10,13 +10,16 @@
  */
 int op_bi(va_list note)
 {
-	unsigned int a, b, j, numb;
-	unsigned int bi[32];
-	int c;
-	char t;
+	unsigned int a;
+	char *t;
 
 	a = va_arg(note, unsigned int);
-	b = 2147483648;
+	t = convert(a, 2);
+	for (j = 0; t[j]; j++)
+	{
+		display(t[j]);
+	}
+	/*b = 2147483648;
 	bi[0] = a / b;
 	j = 0;
 	while (j < 32)
