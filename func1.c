@@ -15,7 +15,7 @@ int op_bi(va_list note)
 	char *t;
 
 	a = va_arg(note, unsigned int);
-	t = conv(a, 2);
+	t = op_vert(a, 2);
 	for (j = 0; t[j]; j++)
 	{
 		c += display(t[j]);
