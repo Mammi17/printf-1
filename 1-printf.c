@@ -12,7 +12,6 @@
 int _printf(const char *format, ...)
 {
 	int j = 0, c = 0, (*fun)(va_list);
-	drap g;
 	va_list note;
 
 	va_start(note, format);
