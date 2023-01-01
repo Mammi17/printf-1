@@ -30,10 +30,10 @@ int _printf(const char *format, ...)
 					write(1, &ab, *ac);
 				else
 					*ac = 0;
-				a = flag(format, &g);
+				a = flag(format[j], &g);
 				b = precision(format, &j, note);
 				d = width(format, &j, note);
-				e = size(format, &j);
+				/*e = size(format, &j);*/
 				if (format[j + 1] == '%')
 				{
 					c += display(format[j]);

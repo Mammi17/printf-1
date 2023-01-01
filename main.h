@@ -44,5 +44,5 @@ int (*ob_func(char a))(va_list note);
 int _printf(const char *format, ...);
 int display(char c);
 /*int size(const char *format, int *j)*/
-int with(const char *format, int *j, va_list note);
+int width(const char *format, int *j, va_list note);
 #endif
