@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <unistd.h>
 /**
  * _printf - that produces output according to a format
  * @format: a character constant
@@ -28,7 +29,7 @@ int _printf(const char *format, ...)
 					write(1, &ab, *ac);
 				else
 					*ac = 0;
-				a = flag(format, &j);
+				a = flag(format, j);
 				b = precision(format, &j, note);
 				d = width(format, &j, note);
 				e = size(format, &j);
