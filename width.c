@@ -16,9 +16,7 @@ int width(const char *format, int *j, va_list note)
 	th = 0;
 	for (b = *j + 1; format[b] != '\0'; b++)
 	{
-		if (format[b] >= '0')
-		{
-			if (format[b] <= '9')
+		if (format[b] >= '0' && format[b] <= '9')
 			{
 				th *= 10;
 				th += format[b] - '0';

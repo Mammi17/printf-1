@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 			return (-1);
 		while (format && format[j] != '\0')
 		{
-			/*if (format[j] == '%')
+			if (format[j] == '%')
 			{
 				if (*ac > 0)
 					write(1, &ab, *ac);
@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 				a = flag(format, &j);
 				b = precision(format, &j, note);
 				d = width(format, &j, note);
-				e = size(format, &j);*/
+				e = size(format, &j);
 				if (format[j + 1] == '%')
 				{
 					c += display(format[j]);
