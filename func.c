@@ -60,7 +60,7 @@ int op_de(va_list note)
 int op_st(va_list note)
 {
 	char *string, b;
-	int c, j;
+	int j;
 
 	string = va_arg(note, char *);
 	if (string == NULL)
