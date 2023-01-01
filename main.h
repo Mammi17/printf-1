@@ -3,6 +3,9 @@
 #include <stdarg.h>
 
 #define SIZE 1024
+#define S_LONG 2
+#define S_SHORT 1
+
 /**
  * struct ob - a structure
  * @cor: a character
@@ -43,6 +46,6 @@ int op_cent(va_list note);
 int (*ob_func(char a))(va_list note);
 int _printf(const char *format, ...);
 int display(char c);
-/*int size(const char *format, int *j)*/
+int size(const char *format, int *j)
 int width(const char *format, int *j, va_list note);
 #endif

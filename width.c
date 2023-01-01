@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdarg.h>
 
 /**
  * width - that handles the width for non-custom

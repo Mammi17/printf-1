@@ -11,14 +11,14 @@
 int op_bi(va_list note)
 {
 	unsigned int a;
-	int j, c;
+	int j, ;
 	char *t;
 
 	a = va_arg(note, unsigned int);
 	t = op_vert(a, 2);
 	for (j = 0; t[j]; j++)
 	{
-		c += display(t[j]);
+		display(t[j]);
 	}
 	/*b = 2147483648;
 	bi[0] = a / b;
@@ -42,7 +42,7 @@ int op_bi(va_list note)
 		}
 		j++;
 	}*/
-	return (c);
+	return (0);
 }
 
 /**
