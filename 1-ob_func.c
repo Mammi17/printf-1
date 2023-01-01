@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdio.h>
-#include <stddef.h>
 /**
  * ob_func - that prints the correct character
  * @a: a character
@@ -29,7 +28,7 @@ int (*ob_func(char a))(va_list)
 		{NULL, NULL}
 	};
 
-	for (j = 0; point[j].cor != NULL; j++)
+	for (j = 0; point[j].cor; j++)
 	{
 		if (a == point[j].cor[0])
 			return (point[j].funct);
