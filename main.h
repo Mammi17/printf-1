@@ -53,7 +53,7 @@ int op_ad(va_list note, spe *p);
 int flag(char t, drap *g);
 int precision(const char *format, int *j, va_list note);
 int op_cent(va_list note, spe *p);
-int (*ob_func(char a, spe *p))(va_list note);
+int (*ob_func(char *a))(va_list note, spe *p);
 int _printf(const char *format, ...);
 int display(char c);
 int size(const char *format, int *j);

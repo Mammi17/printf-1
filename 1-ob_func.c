@@ -9,7 +9,7 @@
  * Return: an integer
  */
 
-int (*ob_func(char a, spe *p))(va_list)
+int (*ob_func(char *a))(va_list note, spe *p)
 {
 	int j;
 	ob point[] = {
@@ -32,11 +32,11 @@ int (*ob_func(char a, spe *p))(va_list)
 
 	for (j = 0; point[j].cor != NULL; j++)
 	{
-		if (a == point[j].cor[0])
+		if (*a == point[j].cor[0])
 			return (point[j].funct);
 	}
-
-	if (point[j].cor[0]== '\0')
+	return (NULL);
+	/*if (point[j].cor[0]== '\0')
 	{
 		if (a[*i] == '\0')
 			return (-1);
@@ -55,5 +55,5 @@ int (*ob_func(char a, spe *p))(va_list)
 		len += display(a[*i]);
 		return (len);
 	}
-	return (-1);
+	return (-1);*/
 }
