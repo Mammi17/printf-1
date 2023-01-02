@@ -9,7 +9,7 @@
  * Return: an integer
  */
 
-int (*ob_func(char a))(va_list, spe *)
+int (*ob_func(char a, spe *p))(va_list)
 {
 	int j;
 	ob point[] = {

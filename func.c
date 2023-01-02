@@ -92,7 +92,7 @@ int op_t(va_list note, spe *p)
 
 	(void)p;
 
-	t = op_de(note);
+	t = op_de(note, p);
 	return (t);
 }
 

@@ -43,7 +43,7 @@ int _printf(const char *format, ...)
 				{
 					fun = ob_func(format[j + 1], p);
 					if (fun != 0)
-						c += fun(note);
+						c += fun(note, p);
 					else
 						c = display(format[j]) + display(format[j + 1]);
 					j += 2;
