@@ -14,10 +14,10 @@
 
 typedef struct specificateur
 {
-	int pre = 0;
-	int th = 0;
-	int ze = 0;
-	int fl = 0;
+	int pre : 0;
+	int th : 0;
+	int ze : 0;
+	int fl : 0;
 } spe;
 
 typedef struct ob
