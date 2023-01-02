@@ -8,9 +8,9 @@
  * Return: an integer
  */
 
-int (*ob_func(char a))(va_list)
+int (*ob_func(const char *a))(va_list note, spe *p)
 {
-	int j;
+	int j, *i;
 	ob point[] = {
 		{"s", op_st},
 		{"c", op_c},
@@ -32,7 +32,28 @@ int (*ob_func(char a))(va_list)
 	for (j = 0; point[j].cor != NULL; j++)
 	{
 		if (a == point[j].cor[0])
-			return (point[j].funct);
+			return (point[j].funct(note, p));
+	}
+
+	if (point[j].cor[0]== '\0')
+	{
+		if (a[*i] == '\0')
+			return (-1);
+		len += display("%%");
+		if (a[*i - 1] == ' ')
+			len += display(" ");
+		else if (p->th)
+		{
+			(*i)--;
+			while (a[*i] != ' ' && a[*i] != '%')
+				(*i)--;
+			if (a[*i] == ' ')
+				(*i)--;
+			return (1)
+		}
+		len += display(a[*i]);
+		return (len));
 	}
 	return (NULL);
+	{
 }

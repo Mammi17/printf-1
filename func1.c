@@ -14,6 +14,8 @@ int op_bi(va_list note)
 	int j;
 	char *t;
 
+	(void)p;
+
 	a = va_arg(note, unsigned int);
 	t = op_vert(a, 2);
 	for (j = 0; t[j]; j++)
@@ -55,6 +57,8 @@ int op_un(va_list note)
 	unsigned int numb;
 	int c, l;
 
+	(void)p;
+
 	numb = va_arg(note, unsigned int);
 	c = 1;
 	while ((numb / c) > 9)
@@ -82,6 +86,8 @@ int op_oc(va_list note)
 {
 	unsigned long int l, numb, ab, i, j, m;
 	int c;
+
+	(void)p;
 
 	c = 0;
 	numb = va_arg(note, unsigned long int);
@@ -118,6 +124,8 @@ int op_hexal(va_list note)
 	unsigned int l, numb;
 	int a, b, j, c;
 	char *h;
+
+	(void)p;
 
 	c = 0;
 	numb = va_arg(note, unsigned int);
@@ -162,6 +170,8 @@ int op_hexaup(va_list note)
 	unsigned int l, numb;
 	int a, b, j, c;
 	char *h;
+
+	(void)p;
 
 	c = 0;
 	numb = va_arg(note, unsigned int);

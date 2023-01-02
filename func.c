@@ -7,9 +7,11 @@
  * @note: an argument
  * Return: an integer
  */
-int op_c(va_list note)
+int op_c(va_list note, spe *p)
 {
 	int d;
+
+	(void)p;
 
 	d = va_arg(note, int);
 	return (display(d));
@@ -25,6 +27,8 @@ int op_de(va_list note)
 	unsigned int c, numb, abs, a;
 	int j;
 	char l, b;
+
+	(void)p;
 
 	c = 0;
 	j = va_arg(note, int);
@@ -62,6 +66,8 @@ int op_st(va_list note)
 	char *string, b;
 	int j;
 
+	(void)p;
+
 	string = va_arg(note, char *);
 	if (string == NULL)
 	{
@@ -84,6 +90,8 @@ int op_t(va_list note)
 {
 	int t;
 
+	(void)p;
+
 	t = op_de(note);
 	return (t);
 }
@@ -96,6 +104,8 @@ int op_t(va_list note)
 int op_cent(va_list note)
 {
 	char *string;
+
+	(void)p;
 
 	string = "%";
 	if (va_arg(note, int) == *string)

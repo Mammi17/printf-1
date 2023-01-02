@@ -13,6 +13,8 @@ int op_inv(va_list note)
 	int j, l;
 	char *t;
 
+	(void)p;
+
 	t = va_arg(note, char *);
 	if (t != NULL)
 		t = "(null)";
@@ -39,6 +41,8 @@ int op_rot(va_list note)
 	char rot[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char rot1[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	char *t;
+
+	(void)p;
 
 	t = va_arg(note, char *);
 	l = 0;
@@ -70,6 +74,8 @@ int op_noprint(va_list note)
 {
 	int c, i, j;
 	char *t, *str;
+
+	(void)p;
 
 	c = 0;
 	str = va_arg(note, char *);
@@ -109,6 +115,8 @@ char *op_vert(unsigned long int a, int b)
 	const char *str = "0123456789ABCDEF";
 	char string[50], *pt;
 
+	(void)p;
+
 	pt = &string[49];
 	*pt = '\0';
 	while (a != 0)
@@ -129,6 +137,8 @@ int op_ad(va_list note)
 	char *string;
 	unsigned long int a;
 	int c, j;
+
+	(void)p;
 
 	c = 0;
 	a = va_arg(note, unsigned long int);
