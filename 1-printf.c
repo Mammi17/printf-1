@@ -12,6 +12,7 @@
 int _printf(const char *format, ...)
 {
 	int j = 0, c = 0, (*fun)(va_list);
+	drap g;
 	va_list note;
 
 	va_start(note, format);
@@ -28,8 +29,8 @@ int _printf(const char *format, ...)
 				else
 					*ac = 0;*/
 				while (flag(format[j], &g))
-						format++;
-				if(precision(format, &j, note))
+					format++;
+				if (precision(format, &j, note))
 					format++;
 				if (width(format, &j, note))
 					format++;

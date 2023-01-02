@@ -40,12 +40,12 @@ int op_rot(va_list note);
 int op_noprint(va_list note);
 char *op_vert(unsigned long int a, int b);
 int op_ad(va_list note);
-/*int flag(char t, drap *g);
-int precision(const char *format, int *j, va_list note);*/
+int flag(char t, drap *g);
+int precision(const char *format, int *j, va_list note);
 int op_cent(va_list note);
 int (*ob_func(char a))(va_list note);
 int _printf(const char *format, ...);
 int display(char c);
-/*int size(const char *format, int *j);
-int width(const char *format, int *j, va_list note);*/
+int size(const char *format, int *j);
+int width(const char *format, int *j, va_list note);
 #endif
