@@ -8,7 +8,7 @@
  * @note: an argument
  * Return: an integer
  */
-int op_bi(va_list note)
+int op_bi(va_list note, spe *p)
 {
 	unsigned int a;
 	int j;
@@ -52,7 +52,7 @@ int op_bi(va_list note)
  * @note: an argument
  * Return: an integer
  */
-int op_un(va_list note)
+int op_un(va_list note, spe *p)
 {
 	unsigned int numb;
 	int c, l;
@@ -82,7 +82,7 @@ int op_un(va_list note)
  * @note: an argument
  * Return: an integer
  */
-int op_oc(va_list note)
+int op_oc(va_list note, spe *p)
 {
 	unsigned long int l, numb, ab, i, j, m;
 	int c;
@@ -119,7 +119,7 @@ int op_oc(va_list note)
  * @note: an argument
  * Return: an integer
  */
-int op_hexal(va_list note)
+int op_hexal(va_list note, spe *p)
 {
 	unsigned int l, numb;
 	int a, b, j, c;
@@ -165,7 +165,7 @@ int op_hexal(va_list note)
  * @note: an argument
  * Return: an integer
  */
-int op_hexaup(va_list note)
+int op_hexaup(va_list note, spe *p)
 {
 	unsigned int l, numb;
 	int a, b, j, c;

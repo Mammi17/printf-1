@@ -22,7 +22,7 @@ int op_c(va_list note, spe *p)
  * @note: an argument
  * Return: an integer
  */
-int op_de(va_list note)
+int op_de(va_list note, spe *p)
 {
 	unsigned int c, numb, abs, a;
 	int j;
@@ -61,7 +61,7 @@ int op_de(va_list note)
  * @note: an argument
  * Return: an integer
  */
-int op_st(va_list note)
+int op_st(va_list note, spe *p)
 {
 	char *string, b;
 	int j;
@@ -86,7 +86,7 @@ int op_st(va_list note)
  * @note: an argument
  * Return: an integer
  */
-int op_t(va_list note)
+int op_t(va_list note, spe *p)
 {
 	int t;
 
@@ -101,7 +101,7 @@ int op_t(va_list note)
  * @note: an argument
  * Return: an integer
  */
-int op_cent(va_list note)
+int op_cent(va_list note, spe *p)
 {
 	char *string;
 

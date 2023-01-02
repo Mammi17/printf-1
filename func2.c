@@ -8,7 +8,7 @@
  * @note: an argument
  * Return: an integer
  */
-int op_inv(va_list note)
+int op_inv(va_list note, spe *p)
 {
 	int j, l;
 	char *t;
@@ -35,7 +35,7 @@ int op_inv(va_list note)
  * @note: an argument
  * Return: an integer
  */
-int op_rot(va_list note)
+int op_rot(va_list note, spe *p)
 {
 	int l, j;
 	char rot[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -70,7 +70,7 @@ int op_rot(va_list note)
  * @note: an argument
  * Return: an integer
  */
-int op_noprint(va_list note)
+int op_noprint(va_list note, spe *p)
 {
 	int c, i, j;
 	char *t, *str;
@@ -115,8 +115,6 @@ char *op_vert(unsigned long int a, int b)
 	const char *str = "0123456789ABCDEF";
 	char string[50], *pt;
 
-	(void)p;
-
 	pt = &string[49];
 	*pt = '\0';
 	while (a != 0)
@@ -132,7 +130,7 @@ char *op_vert(unsigned long int a, int b)
  * @note: an argument
  * Return: an integer
  */
-int op_ad(va_list note)
+int op_ad(va_list note, spe *p)
 {
 	char *string;
 	unsigned long int a;
