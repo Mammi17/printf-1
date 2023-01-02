@@ -5,7 +5,6 @@
 #define SIZE 1024
 #define S_LONG 2
 #define S_SHORT 1
-#define SPECI_INIT {0, 0, 0, 0}
 
 /**
  * struct ob - a structure
@@ -15,10 +14,10 @@
 
 typedef struct specificateur
 {
-	int pre;
-	int th;
-	int ze;
-	int fl;
+	int pre = 0;
+	int th = 0;
+	int ze = 0;
+	int fl = 0;
 } spe;
 
 typedef struct ob
