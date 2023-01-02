@@ -12,6 +12,14 @@
  * @f: a function pointer
  */
 
+typedef struct specificateur
+{
+	int pre;
+	int th;
+	int ze;
+	int fl;
+} spe;
+
 typedef struct ob
 {
 	char *cor;
@@ -27,13 +35,6 @@ typedef struct flags
 	int zero;
 } drap;
 
-typedef struct specificateur
-{
-	int pre;
-	int th;
-	int ze;
-	int fl;
-} spe;
 int op_st(va_list note, spe *p);
 int op_de(va_list note, spe *p);
 int op_t(va_list note, spe *p);
