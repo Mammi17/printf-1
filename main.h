@@ -5,7 +5,7 @@
 #define SIZE 1024
 #define S_LONG 2
 #define S_SHORT 1
-#define INIT {0, 0, 0, 0}
+#define SPECI_INIT {0, 0, 0, 0}
 
 /**
  * struct ob - a structure

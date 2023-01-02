@@ -12,7 +12,7 @@
 int _printf(const char *format, ...)
 {
 	int j = 0, c = 0, (*fun)(va_list, spe *);
-	spe *p = INIT;
+	spe *p = SPECI_INIT;
 	drap g;
 	va_list note;
 
