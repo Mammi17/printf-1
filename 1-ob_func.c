@@ -36,8 +36,9 @@ int (*ob_func(const char *a))(va_list, spe *)
 		if (*a == point[j].cor[0])
 			return (point[j].funct);
 	}
+	return (NULL);
 
-	if (point[j].cor[0]== '\0')
+	/*if (point[j].cor[0]== '\0')
 	{
 		if (a[*i] == '\0')
 			return (-1);
@@ -51,11 +52,10 @@ int (*ob_func(const char *a))(va_list, spe *)
 				(*i)--;
 			if (a[*i] == ' ')
 				(*i)--;
-			return (1)
+			return (1);
 		}
 		len += display(a[*i]);
 		return (len);
 	}
-	return (-1);
-	{
+	return (-1);*/
 }
