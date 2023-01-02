@@ -5,7 +5,8 @@
 #define SIZE 1024
 #define S_LONG 2
 #define S_SHORT 1
-#define SP_INIT {NULL, NULL, NULL, NULL}
+
+#define SP_INIT {0, 0, 0, 0}
 /**
  * struct ob - a structure
  * @cor: a character
