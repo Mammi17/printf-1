@@ -8,9 +8,10 @@
  * Return: an integer
  */
 
-int (*ob_func(const char *a))(va_list note, spe *p)
+int (*ob_func(const char *a))(va_list, spe *)
 {
-	int j, *i;
+	int len, j, *i;
+	spe *p;
 	ob point[] = {
 		{"s", op_st},
 		{"c", op_c},
@@ -31,8 +32,8 @@ int (*ob_func(const char *a))(va_list note, spe *p)
 
 	for (j = 0; point[j].cor != NULL; j++)
 	{
-		if (a == point[j].cor[0])
-			return (point[j].funct(note, p));
+		if (*a == point[j].cor[0])
+			return (point[j].funct);
 	}
 
 	if (point[j].cor[0]== '\0')
