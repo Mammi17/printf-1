@@ -2,6 +2,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 /**
  * ob_func - that prints the correct character
  * @a: a character
@@ -40,9 +41,9 @@ int (*ob_func(const char *a))(va_list, spe *)
 	{
 		if (a[*i] == '\0')
 			return (-1);
-		len += display("%%");
+		len += write(1, "%%", 1);
 		if (a[*i - 1] == ' ')
-			len += display(" ");
+			len += write(1, " ", 1);
 		else if (p->th)
 		{
 			(*i)--;
@@ -53,8 +54,8 @@ int (*ob_func(const char *a))(va_list, spe *)
 			return (1)
 		}
 		len += display(a[*i]);
-		return (len));
+		return (len);
 	}
-	return (NULL);
+	return (-1);
 	{
 }
