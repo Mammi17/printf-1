@@ -26,11 +26,15 @@ int _printf(const char *format, ...)
 				/*if (*ac > 0)
 					write(1, &ab, *ac);
 				else
-					*ac = 0;
-				a = flag(format[j], &g);
-				b = precision(format, &j, note);
-				d = width(format, &j, note);
-				e = size(format, &j);*/
+					*ac = 0;*/
+				while (flag(format[j], &g))
+						format++;
+				if(precision(format, &j, note))
+					format++;
+				if (width(format, &j, note))
+					format++;
+				if (size(format, &j))
+					format++;
 				if (format[j + 1] == '%')
 				{
 					c += display(format[j]);
