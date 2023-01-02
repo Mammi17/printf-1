@@ -12,9 +12,11 @@
 int _printf(const char *format, ...)
 {
 	int j = 0, c = 0, (*fun)(va_list, spe *);
-	spe *p = SP_INIT	;
+	spe *p;
 	drap g;
 	va_list note;
+
+	&p = SP_INIT;
 
 	va_start(note, format);
 	if (format != NULL)
