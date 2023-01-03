@@ -12,6 +12,8 @@ int op_c(va_list note, spe *p)
 {
 	int d;
 
+	(void)p;
+
 	d = va_arg(note, int);
 	return (display(d));
 }
