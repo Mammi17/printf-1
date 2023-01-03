@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 				}
 				else
 				{
-					fun = ob_func(format[j + 1], p);
+					fun = ob_func(format[j + 1]);
 					if (fun != 0)
 						c += fun(note, p);
 					else
