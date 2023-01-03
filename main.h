@@ -48,7 +48,7 @@ int op_hexal(va_list note, spe *p);
 int op_hexaup(va_list note, spe *p);
 int op_inv(va_list note, spe *p);
 int op_rot(va_list note, spe *p);
-int op_noprint(va_list note, spe*p);
+int op_noprint(va_list note, spe *p);
 char *op_vert(unsigned long int a, int b);
 int op_ad(va_list note, spe *p);
 int flag(char t, drap *g);
