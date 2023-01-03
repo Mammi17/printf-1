@@ -10,12 +10,12 @@
  */
 int op_c(va_list note, spe *p)
 {
-	int d;
+	int d, c;
 
 	(void)p;
 
 	d = va_arg(note, int);
-	return (display(d));
+	return (&ob_func(d));
 }
 
 /**
