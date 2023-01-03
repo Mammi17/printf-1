@@ -5,21 +5,21 @@
 /**
  * op_c - function that print a character
  * @note: an argument
+ * @p: a structure
  * Return: an integer
  */
 int op_c(va_list note, spe *p)
 {
 	int d;
 
-	(void)p;
-
 	d = va_arg(note, int);
-	return (display(d));
+	return (ob_func(d));
 }
 
 /**
  * op_de - function that prints a decimal
  * @note: an argument
+ * @p: a structure
  * Return: an integer
  */
 int op_de(va_list note, spe *p)
@@ -59,6 +59,7 @@ int op_de(va_list note, spe *p)
 /**
  * op_st - function that prints a string
  * @note: an argument
+ * @p: a structure
  * Return: an integer
  */
 int op_st(va_list note, spe *p)
@@ -84,6 +85,7 @@ int op_st(va_list note, spe *p)
 /**
  * op_t - function that prints an integer
  * @note: an argument
+ * @p: a structure
  * Return: an integer
  */
 int op_t(va_list note, spe *p)
@@ -99,6 +101,7 @@ int op_t(va_list note, spe *p)
 /**
  * op_cent - that switch to percentage
  * @note: an argument
+ * @p: a structure
  * Return: an integer
  */
 int op_cent(va_list note, spe *p)
