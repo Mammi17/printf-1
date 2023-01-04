@@ -57,6 +57,7 @@ int op_cent(va_list note, spe *p);
 int (*ob_func(char a))(va_list note, spe *p);
 int _printf(const char *format, ...);
 int display(char c);
+int obtenir(char a, spe *p);
 int size(const char *format, int *j);
 int width(const char *format, int *j, va_list note);
 #endif
