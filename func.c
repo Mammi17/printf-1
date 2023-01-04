@@ -10,13 +10,10 @@
  */
 int op_c(va_list note, spe *p)
 {
-	int d, c;
-
-	(void)p;
+	int d;
 
 	d = va_arg(note, int);
-	c = *ob_func(d);
-	return (c);
+	return (obtenir(d, p));
 }
 
 /**

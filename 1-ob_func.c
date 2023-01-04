@@ -57,3 +57,20 @@ int (*ob_func(char a))(va_list note, spe *p)
 	}
 	return (-1);*/
 }
+
+/**
+ * obtenir - handles the specificateur
+ * @a: a character
+ * @p: a structure
+ * Return: an integer
+ */
+
+int obtenir(char a, spe *p)
+{
+	int (*fonc)(va_list note, spe *p) = ob_func(a);
+	if (fonc)
+	{
+		return (fonc(note, p));
+	}
+	return (0);
+}
