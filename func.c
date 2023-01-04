@@ -15,7 +15,7 @@ int op_c(va_list note, spe *p)
 	(void)p;
 
 	d = va_arg(note, int);
-	&c = ob_func(d);
+	c = *ob_func(d);
 	return (c);
 }
 
