@@ -15,10 +15,10 @@
 
 typedef struct specificateur
 {
-	int pre;
-	int th;
-	int ze;
-	int fl;
+	int pre : 1;
+	int th : 1;
+	int ze : 1;
+	int fl : 1;
 } spe;
 
 typedef struct ob
