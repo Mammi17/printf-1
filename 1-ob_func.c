@@ -65,7 +65,7 @@ int (*ob_func(char a))(va_list note, spe *p)
  * Return: an integer
  */
 
-int obtenir(char a, spe *p)
+int obtenir(char a, va_list note, spe *p)
 {
 	int (*fonc)(va_list note, spe *p) = ob_func(a);
 	if (fonc)
