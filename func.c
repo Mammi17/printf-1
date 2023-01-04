@@ -13,7 +13,7 @@ int op_c(va_list note, spe *p)
 	int d;
 
 	d = va_arg(note, int);
-	return (obtenir(d, p));
+	return (obtenir(d, note, p));
 }
 
 /**
