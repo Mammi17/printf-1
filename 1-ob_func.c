@@ -9,7 +9,8 @@
  * Return: an integer
  */
 
-int (*ob_func(char a))(va_list note, spe *p)
+int obtenir(char a, va_list note, spe *p)
+/*int (*ob_func(char a))(va_list note, spe *p)*/
 {
 	int j;
 	ob point[] = {
@@ -35,8 +36,7 @@ int (*ob_func(char a))(va_list note, spe *p)
 		if (a == point[j].cor[0])
 			return (point[j].funct);
 	}
-	return (NULL);
-	/*if (point[j].cor[0]== '\0')
+	if (point[j].cor[0]== '\0')
 	{
 		if (a[*i] == '\0')
 			return (-1);
@@ -55,7 +55,7 @@ int (*ob_func(char a))(va_list note, spe *p)
 		len += display(a[*i]);
 		return (len);
 	}
-	return (-1);*/
+	return (-1);
 }
 
 /**
@@ -63,7 +63,7 @@ int (*ob_func(char a))(va_list note, spe *p)
  * @a: a character
  * @p: a structure
  * Return: an integer
- */
+ 
 
 int obtenir(char a, va_list note, spe *p)
 {
@@ -73,4 +73,4 @@ int obtenir(char a, va_list note, spe *p)
 		return (fonc(note, p));
 	}
 	return (0);
-}
+}*/
