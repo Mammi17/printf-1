@@ -65,7 +65,7 @@ int op_de(va_list note, spe *p)
  */
 int op_st(va_list note, spe *p)
 {
-	char *string, b;
+	char *string;
 	int j, min = 1, l;
 
 	string = va_arg(note, char *);
@@ -95,7 +95,7 @@ int op_st(va_list note, spe *p)
 		else
 		{
 			l = p->th - j;
-			while (i > 0)
+			while (l > 0)
 			{
 				display(' ');
 				l--;
