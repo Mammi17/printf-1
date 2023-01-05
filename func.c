@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdarg.h>
+#include <unistd.h>
 
 /**
  * op_c - function that print a character
@@ -65,9 +66,7 @@ int op_de(va_list note, spe *p)
 int op_st(va_list note, spe *p)
 {
 	char *string, b;
-	int j;
-
-	(void)p;
+	int j, min = 1, l;
 
 	string = va_arg(note, char *);
 	if (string == NULL)
@@ -77,9 +76,35 @@ int op_st(va_list note, spe *p)
 	for (j = 0; string[j] != '\0'; j++)
 	{
 		b = string[j];
-		display(b);
 	}
-	return (j);
+	if (p->pre >= 0 && p->pre < j)
+		j = p->pre;
+	if (p->th > j)
+	{
+		if (p->fl & min)
+		{
+			write(1, &string[0], j);
+			l = p->th - j;
+			while (l > 0)
+			{
+				display(' ');
+				l--;
+			}
+			return (p->th);
+		}
+		else
+		{
+			l = p->th - j;
+			while (i > 0)
+			{
+				display(' ');
+				l--;
+			}
+			write(1, &string[0], j);
+			return (p->th);
+		}
+	}
+	return (write(1, string, j));
 }
 
 /**
