@@ -75,7 +75,7 @@ int op_st(va_list note, spe *p)
 	}
 	for (j = 0; string[j] != '\0'; j++)
 	{
-		b = string[j];
+		j++;
 	}
 	if (p->pre >= 0 && p->pre < j)
 		j = p->pre;
