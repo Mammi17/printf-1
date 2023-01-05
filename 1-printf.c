@@ -11,7 +11,7 @@
 
 int _printf(const char *format, ...)
 {
-	int j = 0, c = 0, (*fun)(va_list, spe *);
+	int j = 0, c = 0, fun;
 	spe r = SP_INIT;
 	spe *p = &r;
 	drap g;
@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 				}
 				else
 				{
-					fun = ob_func(format[j + 1]);
+					fun = obtenir(format, note, p);
 					if (fun != 0)
 						c += fun(note, p);
 					else

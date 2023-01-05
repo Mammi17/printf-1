@@ -9,10 +9,10 @@
  * Return: an integer
  */
 
-int obtenir(char a, va_list note, spe *p)
+int obtenir(const char *a, va_list note, spe *p)
 /*int (*ob_func(char a))(va_list note, spe *p)*/
 {
-	int j;
+	int *i, j;
 	ob point[] = {
 		{"s", op_st},
 		{"c", op_c},
@@ -31,10 +31,10 @@ int obtenir(char a, va_list note, spe *p)
 		{NULL, NULL}
 	};
 
-	for (j = 0; point[j].cor != NULL; j++)
+	for (j = 0; point[j].cor != '\0'; j++)
 	{
-		if (a == point[j].cor[0])
-			return (point[j].funct);
+		if (a[*i] == point[j].cor[0])
+			return (point[j].funct(note, p));
 	}
 	if (point[j].cor[0]== '\0')
 	{
